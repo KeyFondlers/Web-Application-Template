@@ -160,7 +160,7 @@
       transform: scale(0.95);
     }
     
-    label[for="email"] {
+    label[for="username"] {
         top: 1vw;
     }
     
@@ -175,7 +175,7 @@
       font-size: 1vw;
     }
     
-    .LoginPrompt input[type="email"], input[type="password"] {
+    .LoginPrompt input[type="text"], input[type="password"] {
         position: absolute;
         margin: 0;
         height: 2vw;
@@ -189,7 +189,7 @@
 
     }
 
-    .LoginPrompt input[type="email"]:focus, input[type="password"]:focus{
+    .LoginPrompt input[type="text"]:focus, input[type="password"]:focus{
       border-color: var(--orange);
       border-width: 0.125vw;
       outline: 0;
@@ -213,7 +213,7 @@
       accent-color: var(--orange);
     }
     
-    .LoginPrompt #email{
+    .LoginPrompt #username{
       top: 2.25vw;
       left: 1vw;
     }
