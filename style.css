@@ -1,0 +1,256 @@
+:root {
+    /* Color Palette */
+      --orange: #eb5e28;
+      --white: #fffcf2;
+      --gray1: #ccc5b9;
+      --gray2: #403d39;
+      --gray3: #252422;
+    }
+    
+    /* Class to make things unselectable */
+    .unselectable {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    
+    body {
+      /* Body Takes Up Whole Window */
+      background-color: var(--gray3);
+    
+      position: fixed;
+    
+      margin: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    
+      min-height: 450px;
+    }
+    
+    .NavBar {
+      z-index: 0;
+    
+      margin: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+    
+      height: 70px;
+    
+      /*background: linear-gradient(to left,#0061ff, #60efff);*/
+      background-color: var(--gray2);
+      filter: drop-shadow(0px 1.5px 4px black);
+    
+      min-width: 450px;
+    }
+    
+    #LoginButton {
+      z-index: 1;
+      padding: 0;
+    
+      color: var(--white);
+      background-color: rgba(255, 255, 255, 0.125);
+    
+      border-style: solid;
+      border-width: 2px;
+      border-radius: 15px;
+      border-color: var(--gray1);
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+    
+      left: 100vw;
+      width: 70px;
+      transform: translateX(-130%);
+      height: 30px;
+      position: absolute;
+      top: 20px;
+    
+      filter: drop-shadow(2px 1.5px 4px black);
+    
+      transition: color 0.3s;
+      transition: background-color 0.3s;
+    }
+    
+    #LoginButton:hover {
+      color: var(--orange);
+      background-color: var(--gray1);
+    }
+    
+    #LoginButton:active {
+      transform: translateX(-130%) translateY(1px);
+    }
+    
+    #AppHeader {
+      z-index: 2;
+      position: absolute;
+      text-align: center;
+      color: var(--gray1);
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      margin: 0;
+      left: 12px;
+      font-size: 40px;
+      height: 40px;
+      line-height: 40px;
+    
+      top: 50%;
+      transform: translateY(-50%);
+    
+      filter: drop-shadow(0px 1.5px 2px black);
+    }
+    
+    .LoginPrompt {
+
+      opacity: 0;
+
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+    
+      border-style: solid;
+      border-width: 0.25vw;
+      border-color: var(--orange);
+    
+      width: 22vw;
+      height: 13.25vw;
+    
+      position: absolute;
+    
+      left: 50%;
+      top: 50%;
+    
+      transform: translateX(-50%) translateY(-50%);
+    
+      background-color: var(--white);
+    
+      filter: drop-shadow(0px 8px 8px);
+    
+      max-width: 22vw;
+
+      transition: opacity 0.25s;
+    }
+    
+    #LoginPromptLabel {
+      position: absolute;
+      left: 1vw;
+      font-size: 1vw;
+    }
+
+    #LoginPromptClose{
+      position: absolute;
+      right: 0;
+      width: 1.5vw;
+      height: 1.5vw;
+
+      background-color: var(--white);
+      color: var(--orange);
+      border: 0;
+
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      font-size: 1vw;
+
+    }
+
+    #LoginPromptClose:active{
+      transform: scale(0.95);
+    }
+    
+    label[for="email"] {
+        top: 1vw;
+    }
+    
+    label[for="pass"] {
+      top: 4.5vw;
+    }
+    
+    label[for="rememberMe"]{
+      position: absolute;
+      top: 8.25vw;
+      left: 2.5vw;
+      font-size: 1vw;
+    }
+    
+    .LoginPrompt input[type="email"], input[type="password"] {
+        position: absolute;
+        margin: 0;
+        height: 2vw;
+        width: 19vw;
+
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+
+        padding-left: 0.5vw;
+        padding-right: 0.5vw;
+
+    }
+
+    .LoginPrompt input[type="email"]:focus, input[type="password"]:focus{
+      border-color: var(--orange);
+      border-width: 0.125vw;
+      outline: 0;
+    }
+    
+    .LoginPrompt input[type="checkbox"] {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      
+      border-style: hidden;
+    
+      width: 1.25vw;
+      height: 1.25vw;
+    
+      top: 8.25vw;
+      left: 1vw;
+    }
+    
+    .LoginPrompt input[type="checkbox"]:checked {
+      accent-color: var(--orange);
+    }
+    
+    .LoginPrompt #email{
+      top: 2.25vw;
+      left: 1vw;
+    }
+    
+    .LoginPrompt #password{
+      top: 5.75vw;
+      left: 1vw;
+    }
+    
+    #btnLogin {
+      position: absolute;
+    
+      width: 20vw;
+      height: 2.5vw;
+    
+      top: 9.75vw;
+      left: 1vw;
+    
+      color: var(--orange);
+    
+      border-style: solid;
+      border-width: 0.2vw;
+      border-color: var(--orange);
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      font-size: 1vw;
+    
+      transition: color 0.3s;
+      transition: background-color 0.3s;
+    }
+    
+    #btnLogin:hover {
+      color: var(--white);
+      background-color: var(--orange);
+    }
+    
+    #btnLogin:active {
+      transform: translateY(1px);
+    }
+    
